@@ -1,0 +1,25 @@
+/* Ornament Component Styles */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ornament__line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.ornament__symbol {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .ornament__line {
+    width: 40px;
+  }
+}

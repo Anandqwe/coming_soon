@@ -1,0 +1,32 @@
+/* Section Component Base Styles */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.section__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section Variants */
+.section--dark {
+  background: linear-gradient(180deg, var(--color-brown-deep) 0%, #1A0F0A 100%);
+  color: var(--color-text-light);
+}
+
+.section--gradient {
+  background: linear-gradient(180deg, var(--color-cream-dark) 0%, var(--color-brown-warm) 40%, var(--color-brown-deep) 100%);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}

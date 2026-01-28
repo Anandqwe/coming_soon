@@ -1,0 +1,120 @@
+.header {
+  background: linear-gradient(135deg, #2C1810 0%, #3D2317 50%, #4A2C2A 100%);
+  padding: 1.2rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(44, 24, 16, 0.4);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__logo:hover {
+  transform: scale(1.02);
+}
+
+.header__logo-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #D4AF37;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+  transition: text-shadow 0.4s ease;
+}
+
+.header__logo:hover .header__logo-text {
+  text-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+}
+
+.header__logo-image {
+  height: 70px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.header__logo:hover .header__logo-image {
+  filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.5));
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #F5E6D3;
+  letter-spacing: 2px;
+  text-transform: none;
+  opacity: 0.85;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.header__tagline::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #D4AF37;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+
+  .header__logo-text {
+    font-size: 1.4rem;
+  }
+
+  .header__tagline {
+    display: none;
+  }
+
+  .header__logo-image {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__logo-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+}
